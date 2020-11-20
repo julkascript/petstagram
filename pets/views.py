@@ -78,7 +78,7 @@ def pets_create(request):
             'form': CreatePetForm(),
         }
         return render(request, 'pet_create.html', context)
-    form = CreatePetForm(request.POST)
+    form = CreatePetForm(request.POST, request.FILES)
     if form.is_valid():
         form.save()
         return redirect('pets index')
