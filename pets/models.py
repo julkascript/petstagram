@@ -12,7 +12,7 @@ class Pet(models.Model):
     name = models.CharField(max_length=6)
     age = models.PositiveIntegerField()
     description = models.TextField()
-    image_url = models.ImageField(upload_to='images')
+    image_url = models.ImageField(upload_to='pets')
 
 
 class Like(models.Model):
