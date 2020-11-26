@@ -31,15 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'pets',
+    'common',
+    'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pets',
-    'common',
-    'accounts'
 ]
 
 MIDDLEWARE = [
@@ -132,3 +132,5 @@ STATICFILES_DIRS = (
 )
 MEDIA_URL = "/media/"
 MEDIA_ROOT = join(BASE_DIR, "media/")
+
+LOGIN_REDIRECT_URL = '/'
